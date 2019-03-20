@@ -7,6 +7,17 @@
     <router-view/>
   </div>
 </template>
+<script>
+export default {
+  name: 'name',
+  mounted() {
+    let htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
+    let htmlDom = document.getElementsByTagName('html')[0];
+    htmlDom.style.fontSize = htmlWidth / 10 + 'px';
+  }
+}
+</script>
+
 <style lang="stylus">
 #app
   font-family 'Avenir', Helvetica, Arial, sans-serif
